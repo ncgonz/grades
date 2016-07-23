@@ -1,7 +1,3 @@
-// Instructions
-
-// Loop over an array of student grades (values from 50-100) and outputs how many of each grades there are.
-
 var letterGrade = {
   lowest:[],
   f:[],
@@ -12,30 +8,36 @@ var letterGrade = {
   highest:[]
 }
 
-
 var scores = [82, 71, 95, 55, 98, 69, 72, 78, 84, 64, 58, 87];
-// console.log(scores)
 
   for (var i = 0; i < scores.length; i++) {
-    if (scores[i] < 56) {
-      letterGrade.lowest.push(scores[i] + " is the lowest grade");
+    if (scores[i] < 60) {
+      letterGrade.f++;
     }
-    // else if (scores.length >= 50 || scores.length <= 60) {
-    //   letterGrade.f.push(scores.length)
-    // }
-    else if (scores[i] > 97 ) {
-      letterGrade.highest.push(scores[i] + " is the highest")
+    else if (scores[i] < 70) {
+      letterGrade.d++;
+    }
+    else if (scores[i] < 80) {
+      letterGrade.c++;
+    }
+    else if (scores[i] < 90) {
+      letterGrade.b++;
+    }
+    else {
+      letterGrade.a++
     }
 }
 
-console.log(letterGrade.lowest)
-console.log(letterGrade.highest)
+/* spread operator used below is an ES6 thing. Used instead of push() in ES5*/
+letterGrade.lowest = Math.min(...scores)
+letterGrade.highest = Math.max(...scores)
 
-// Use console.log to output the following criteria:
+console.log("a's: " + letterGrade.a)
+console.log("b's: " + letterGrade.b)
+console.log("c's: " + letterGrade.c)
+console.log("d's: " + letterGrade.d)
+console.log("f's: " + letterGrade.f)
+console.log("lowest: " + letterGrade.lowest)
+console.log("highest: " + letterGrade.highest)
 
-
-
-// How many of each grade?
-// What is the lowest grade?
-// What is the highest grade?
 
