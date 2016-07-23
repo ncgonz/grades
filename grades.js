@@ -9,21 +9,16 @@
 // A score of 91-100 is an A
 // Start with array of random scores in your JavaScript
 
-// var scores = [82, 71, 95, 55, 98, 69, 72, 78, 84, 64, 58, 87];
+var scores = [82, 71, 95, 55, 98, 69, 72, 78, 84, 64, 58, 87];
+// console.log(scores)
+
+  for (var i = 0; i < scores.length; i++) {
+    scores[i];
+    console.log(scores[i])
+}
 // Use console.log to output the following criteria:
 
 // How many of each grade?
 // What is the lowest grade?
 // What is the highest grade?
 
-function studentGrade(number) {
-  var gradeLetter = {};
-  if(number >= 91) {
-    gradeLetter = "A";
-  }
-
-  return gradeLetter;
-}
-
-var output = studentGrade(95);
-console.log(output)
