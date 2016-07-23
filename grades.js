@@ -32,6 +32,7 @@ var scores = [82, 71, 95, 55, 98, 69, 72, 78, 84, 64, 58, 87];
 letterGrade.lowest = Math.min(...scores)
 letterGrade.highest = Math.max(...scores)
 
+console.log(scores)
 console.log("a's: " + letterGrade.a)
 console.log("b's: " + letterGrade.b)
 console.log("c's: " + letterGrade.c)
